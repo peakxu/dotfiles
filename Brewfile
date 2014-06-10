@@ -43,5 +43,10 @@ install node # This installs `npm` too using the recommended installation method
 install the_silver_searcher
 install tree
 
+# Install some dependencies for IPython Qt
+install freetype
+install libpng
+install pyqt
+
 # Remove outdated versions from the cellar
 cleanup

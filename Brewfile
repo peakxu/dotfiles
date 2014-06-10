@@ -24,6 +24,13 @@ install bash-completion
 # Install wget with IRI support
 install wget --enable-iri
 
+# Install SSH Copy ID
+install ssh-copy-id
+
+# Install Python
+install python --with-brewed-openssl
+install python3 --with-brewed-openssl
+
 # Install more recent versions of some OS X tools
 install vim --override-system-vi
 install homebrew/dupes/grep

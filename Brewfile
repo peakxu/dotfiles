@@ -40,6 +40,7 @@ install homebrew/dupes/screen
 install git
 install nmap
 install node # This installs `npm` too using the recommended installation method
+install the_silver_searcher
 install tree
 
 # Remove outdated versions from the cellar

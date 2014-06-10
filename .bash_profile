@@ -49,9 +49,6 @@ complete -W "NSGlobalDomain" defaults;
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-# SCM breeze
-[ -s "/Users/peakxu/.scm_breeze/scm_breeze.sh" ] && source "/Users/peakxu/.scm_breeze/scm_breeze.sh"
-
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
 # cache pip-installed packages to avoid re-downloading
@@ -64,3 +61,6 @@ syspip(){
 
 # Source RVM profile
 source ~/.profile
+
+# SCM breeze
+[ -s "/Users/peakxu/.scm_breeze/scm_breeze.sh" ] && source "/Users/peakxu/.scm_breeze/scm_breeze.sh"

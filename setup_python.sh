@@ -10,5 +10,8 @@ sudo easy_install pip
 sudo pip install virtualenv
 sudo pip install virtualenvwrapper
 
+# Setup virtualenv
+source /usr/local/bin/virtualenvwrapper.sh
+
 # Install IPython globally
 sudo pip install ipython

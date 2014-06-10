@@ -61,3 +61,6 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 syspip(){
    PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
+
+# Source RVM profile
+source ~/.profile

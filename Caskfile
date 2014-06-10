@@ -4,6 +4,7 @@
 install caskroom/cask/brew-cask
 tap caskroom/versions
 
+cask install caffeine 2> /dev/null
 cask install dash 2> /dev/null
 cask install dropbox 2> /dev/null
 cask install flux 2> /dev/null

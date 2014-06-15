@@ -62,5 +62,8 @@ syspip(){
 # Source RVM profile
 source ~/.profile
 
+# Virtualenv wrapper
+source /usr/local/bin/virtualenvwrapper.sh
+
 # SCM breeze
 [ -s "/Users/peakxu/.scm_breeze/scm_breeze.sh" ] && source "/Users/peakxu/.scm_breeze/scm_breeze.sh"

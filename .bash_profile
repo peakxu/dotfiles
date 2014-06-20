@@ -65,5 +65,7 @@ source ~/.profile
 # Virtualenv wrapper
 source /usr/local/bin/virtualenvwrapper.sh
 
+source ~/.bash_prompt
+
 # SCM breeze
 [ -s "/Users/peakxu/.scm_breeze/scm_breeze.sh" ] && source "/Users/peakxu/.scm_breeze/scm_breeze.sh"

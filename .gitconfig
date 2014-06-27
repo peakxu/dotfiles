@@ -1,7 +1,9 @@
 [user]
-	name = Peak Xu
-	email = peak.xu@gmail.com
+    name = Peak Xu
+    email = peak.xu@gmail.com
 [push]
-	default = simple
+    default = simple
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
+[core]
+    excludesfile = ~/.gitignore

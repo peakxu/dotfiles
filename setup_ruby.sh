@@ -9,3 +9,5 @@ sudo -v
 # source RVM profile
 rvm install 2.1
 rvm use 2.1
+
+gem install pry pry-doc

@@ -1,7 +1,9 @@
 .git/
 .DS_Store
-*.sh
-*.md
-*.txt
+setup_*.sh
+bootstrap.sh
+README.md
+LICENSE-MIT.txt
+exclude.txt
 Brewfile
 Caskfile

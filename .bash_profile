@@ -67,7 +67,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 source ~/.bash_prompt
 
-source ~/.alias.sh
+source ~/.alias
 
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"

@@ -18,4 +18,5 @@ rvm gemset create global
 rvm gemset use global
 
 # Install system-wide gems
+gem install bundler
 gem install pry

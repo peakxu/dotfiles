@@ -45,6 +45,9 @@ install ntfs-3g
 install the_silver_searcher
 install tree
 
+# Install GitHub's hub
+install hub
+
 # Install some dependencies for IPython Qt
 install freetype
 install libpng

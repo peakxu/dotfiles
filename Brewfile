@@ -48,10 +48,5 @@ install tree
 # Install GitHub's hub
 install hub
 
-# Install some dependencies for IPython Qt
-install freetype
-install libpng
-install pyqt
-
 # Remove outdated versions from the cellar
 cleanup

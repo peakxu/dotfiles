@@ -12,6 +12,7 @@ cask install flux 2> /dev/null
 cask install google-chrome 2> /dev/null
 cask install intellij-idea-ce 2> /dev/null
 cask install iterm2 2> /dev/null
+cask install kaleidoscope 2> /dev/null
 cask install macvim 2> /dev/null
 cask install menumeters 2> /dev/null
 cask install mou 2> /dev/null

@@ -59,18 +59,12 @@ syspip(){
    PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
 
-# Source RVM profile
-source ~/.profile
-
 # Virtualenv wrapper
 source /usr/local/bin/virtualenvwrapper.sh
 
 source ~/.bash_prompt
 
 source ~/.alias
-
-# Source RVM scripts
-source ~/.rvm/scripts/rvm 2> /dev/null
 
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"

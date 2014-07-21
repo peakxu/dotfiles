@@ -66,5 +66,10 @@ source ~/.bash_prompt
 
 source ~/.alias
 
+# Add rbenv to PATH
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+
+
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"

@@ -45,6 +45,13 @@ install ntfs-3g
 install the_silver_searcher
 install tree
 
+# Install mysql
+install mysql
+
+# Install Javascript
+install geos
+install phantomjs
+
 # Install GitHub's hub
 install hub
 

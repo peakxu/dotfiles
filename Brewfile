@@ -61,6 +61,9 @@ install phantomjs
 install libxml2
 install libxslt
 
+# AWS tooling
+install s3cmd
+
 # Install GitHub's hub
 install hub
 

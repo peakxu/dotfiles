@@ -27,6 +27,11 @@ install wget --enable-iri
 # Install SSH Copy ID
 install ssh-copy-id
 
+# Install Ruby virtualization
+install rbenv
+install ruby-build
+install rbenv-gemset
+
 # Install Python
 install python --with-brewed-openssl
 install python3 --with-brewed-openssl

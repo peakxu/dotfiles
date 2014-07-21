@@ -52,6 +52,10 @@ install mysql
 install geos
 install phantomjs
 
+# Install XML libs
+install libxml2
+install libxslt
+
 # Install GitHub's hub
 install hub
 

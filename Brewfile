@@ -48,6 +48,7 @@ install jq
 install nmap
 install node # This installs `npm` too using the recommended installation method
 install ntfs-3g
+install pv
 install the_silver_searcher
 install tree
 

@@ -1,3 +1,13 @@
 #!/bin/bash
 
 alias git_cleanup='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+
+function jenkins-build {
+  gitbranch=$(git symbolic-ref --short HEAD)
+  if [[ $? -eq 0 ]] ; then
+    gitrepo=$(basename "$PWD")
+    if [[ $? -eq 0 ]] ; then
+      curl -X POST https://github:kwajfh347f@jenkins.swipely.com/job/app.$gitrepo/buildWithParameters?BRANCH=$gitbranch
+    fi
+  fi
+}

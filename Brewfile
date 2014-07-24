@@ -53,6 +53,9 @@ install pv
 install the_silver_searcher
 install tree
 
+# AWS tools
+install awscli
+
 # Install mysql
 install mysql
 

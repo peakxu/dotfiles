@@ -44,6 +44,7 @@ install homebrew/dupes/screen
 # Install other useful binaries
 install git
 install gpg
+install graphviz
 install jq
 install nmap
 install node # This installs `npm` too using the recommended installation method

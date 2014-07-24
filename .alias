@@ -2,6 +2,8 @@
 
 alias git_cleanup='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
+alias be='bundle exec'
+
 function jenkins-build {
   gitbranch=$(git symbolic-ref --short HEAD)
   if [[ $? -eq 0 ]] ; then

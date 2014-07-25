@@ -55,6 +55,7 @@ install tree
 
 # AWS tools
 install awscli
+install s3cmd
 
 # Install mysql
 install mysql
@@ -67,8 +68,8 @@ install phantomjs
 install libxml2
 install libxslt
 
-# AWS tooling
-install s3cmd
+# Docker tools
+install boot2docker
 
 # Install GitHub's hub
 install hub

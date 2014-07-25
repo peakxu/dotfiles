@@ -1,7 +1,7 @@
 #!/bin/bash
 
-alias git_cleanup='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
-
+alias git_cleanup="git branch --merged master | egrep -iv '(master|production|staging)' | xargs -n 1 git branch -d"
+alias git_cleanup_remote="git branch -r --merged master | egrep -iv '(master|production|staging)' | sed 's/origin\///g' | xargs -n 1 git push --delete origin"
 alias be='bundle exec'
 
 function jenkins-build {

@@ -74,5 +74,8 @@ install boot2docker
 # Install GitHub's hub
 install hub
 
+# Install Redis
+install redis
+
 # Remove outdated versions from the cellar
 cleanup

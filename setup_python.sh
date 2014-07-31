@@ -15,3 +15,4 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Install IPython globally
 sudo pip install ipython
+sudo pip install ipdb

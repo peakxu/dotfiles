@@ -78,5 +78,10 @@ install hub
 # Install Redis
 install redis
 
+# Install some dependencies for IPython Qt
+install freetype
+install libpng
+install pyqt
+
 # Remove outdated versions from the cellar
 cleanup

@@ -16,3 +16,13 @@ source /usr/local/bin/virtualenvwrapper.sh
 # Install IPython globally
 sudo pip install ipython
 sudo pip install ipdb
+
+# Instal IPython notebook dependencies
+sudo pip install pyzmq
+sudo pip install jinja2
+sudo pip install tornado
+
+# Add NumPy and plotting tools
+sudo pip install bokeh
+sudo pip install numpy
+sudo pip install pandas

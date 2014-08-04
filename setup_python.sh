@@ -26,3 +26,4 @@ sudo pip install tornado
 sudo pip install bokeh
 sudo pip install numpy
 sudo pip install pandas
+sudo pip install matplotlib

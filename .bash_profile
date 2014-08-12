@@ -72,5 +72,8 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 # Add additional SSH identities if present
 ssh-add $HOME/.ssh/s-jump.pem || true;
 
+# Add datapipeline CLI to path
+export PATH="$HOME/bin/datapipeline-cli:$PATH"
+
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"

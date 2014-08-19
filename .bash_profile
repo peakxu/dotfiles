@@ -70,6 +70,7 @@ source ~/.alias
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 # Add additional SSH identities if present
+ssh-add $HOME/.ssh/pipeline-debug.pem || true;
 ssh-add $HOME/.ssh/s-jump.pem || true;
 
 # Add datapipeline CLI to path

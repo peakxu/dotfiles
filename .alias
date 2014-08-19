@@ -4,6 +4,9 @@ alias git_cleanup="git branch --merged master | egrep -iv '(master|production|st
 alias git_cleanup_remote="git branch -r --merged master | egrep -iv '(master|production|staging)' | sed 's/origin\///g' | xargs -n 1 git push --delete origin"
 alias be='bundle exec'
 alias bivb='bundle install --path vendor/support'
+alias dp='datapipeline'
+alias dpi='datapipeline --id'
+alias dpl='datapipeline --list-pipelines'
 
 function jenkins-build {
   gitbranch=$(git symbolic-ref --short HEAD)

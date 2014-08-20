@@ -75,6 +75,9 @@ install boot2docker
 # Install GitHub's hub
 install hub
 
+# Install postgres
+install postgresql
+
 # Install Redis
 install redis
 

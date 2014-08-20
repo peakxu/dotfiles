@@ -78,6 +78,9 @@ install hub
 # Install Redis
 install redis
 
+# Install CMake
+install cmake
+
 # Install some dependencies for IPython Qt
 install freetype
 install libpng

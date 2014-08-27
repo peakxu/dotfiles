@@ -1,13 +1,22 @@
 #!/bin/bash
 
+# Git shortcuts
 alias git_cleanup="git branch --merged master | egrep -iv '(master|production|staging)' | xargs -n 1 git branch -d"
 alias git_cleanup_remote="git branch -r --merged master | egrep -iv '(master|production|staging)' | sed 's/origin\///g' | xargs -n 1 git push --delete origin"
+
+# Bundler shortcuts
 alias be='bundle exec'
 alias bivb='bundle install --path vendor/support'
+
+# Working with data pipeline
 alias dp='datapipeline'
 alias dpi='datapipeline --id'
 alias dpli='datapipeline --list-runs --id'
 alias dplm='datapipeline --list-pipelines | grep peakxu'
+
+# Data pipeline deploy
+alias dps='be rake deploy'
+alias dpp='FOG_CREDENTIAL=swipely be rake env=production deploy[now]'
 
 function jenkins-build {
   gitbranch=$(git symbolic-ref --short HEAD)

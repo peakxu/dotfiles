@@ -14,7 +14,11 @@ function jenkins-build {
   if [[ $? -eq 0 ]] ; then
     gitrepo=$(basename "$PWD")
     if [[ $? -eq 0 ]] ; then
-      curl -X POST https://github:kwajfh347f@jenkins.swipely.com/job/app.$gitrepo/buildWithParameters?BRANCH=$gitbranch
+        job_prefixes=( app gem )
+        for job_prefix in "${job_prefixes[@]}"
+        do
+            curl -X POST https://github:kwajfh347f@jenkins.swipely.com/job/$job_prefix.$gitrepo/buildWithParameters?BRANCH=$gitbranch > /dev/null 2>&1 || true
+        done
     fi
   fi
 }

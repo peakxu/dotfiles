@@ -6,7 +6,8 @@ alias be='bundle exec'
 alias bivb='bundle install --path vendor/support'
 alias dp='datapipeline'
 alias dpi='datapipeline --id'
-alias dpl='datapipeline --list-pipelines'
+alias dpli='datapipeline --list-runs --id'
+alias dplm='datapipeline --list-pipelines | grep peakxu'
 
 function jenkins-build {
   gitbranch=$(git symbolic-ref --short HEAD)

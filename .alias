@@ -12,7 +12,7 @@ alias dplm='datapipeline --list-pipelines | grep peakxu'
 function jenkins-build {
   gitbranch=$(git symbolic-ref --short HEAD)
   if [[ $? -eq 0 ]] ; then
-    gitrepo=$(basename "$PWD")
+    gitrepo=$(basename `git rev-parse --show-toplevel`)
     if [[ $? -eq 0 ]] ; then
         job_prefixes=( app gem )
         for job_prefix in "${job_prefixes[@]}"
@@ -20,5 +20,20 @@ function jenkins-build {
             curl -X POST https://github:kwajfh347f@jenkins.swipely.com/job/$job_prefix.$gitrepo/buildWithParameters?BRANCH=$gitbranch > /dev/null 2>&1 || true
         done
     fi
+  fi
+}
+
+function jenkins-show {
+  gitrepo=$(basename `git rev-parse --show-toplevel`)
+  if [[ $? -eq 0 ]] ; then
+      job_prefixes=( app gem )
+      for job_prefix in "${job_prefixes[@]}"
+      do
+        job_url="https://github:kwajfh347f@jenkins.swipely.com/job/$job_prefix.$gitrepo"
+        curl -s --head $job_url | head -n 1 | grep "HTTP/1.[01] [23].." > /dev/null
+        if [[ $? -eq 0 ]] ; then
+          open $job_url
+        fi
+      done
   fi
 }

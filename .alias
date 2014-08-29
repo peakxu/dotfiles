@@ -14,7 +14,8 @@ alias dpi='datapipeline --id'
 alias dpli='datapipeline --list-runs --id'
 alias dplm='datapipeline --list-pipelines | grep peakxu'
 
-# Data pipeline deploy
+# Data pipeline tasks
+alias dpd='be rake definition'
 alias dps='be rake deploy'
 alias dpp='FOG_CREDENTIAL=swipely be rake env=production deploy[now]'
 

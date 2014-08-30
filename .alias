@@ -47,3 +47,8 @@ function jenkins-show {
       done
   fi
 }
+
+function show-pr {
+    export GIT_WORKING_HEAD=`git rev-parse HEAD`
+    curl https://api.github.com/repos/dotswipely/weekly_digest_email_pipeline/pulls?access_token=$(< ~/.github_access_token) 2> /dev/null | jq '[.[] | {url: .html_url, sha: .head.sha}]' | sed s/": "/" => "/ | ruby -e "pulls = eval(STDIN.read); pulls.each { |p| puts p['url'] if p['sha'] == ENV['GIT_WORKING_HEAD'] }" | xargs open
+}

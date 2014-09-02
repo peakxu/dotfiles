@@ -52,3 +52,26 @@ function show-pr {
     export GIT_WORKING_HEAD=`git rev-parse HEAD`
     curl https://api.github.com/repos/dotswipely/weekly_digest_email_pipeline/pulls?access_token=$(< ~/.github_access_token) 2> /dev/null | jq '[.[] | {url: .html_url, sha: .head.sha}]' | sed s/": "/" => "/ | ruby -e "pulls = eval(STDIN.read); pulls.each { |p| puts p['url'] if p['sha'] == ENV['GIT_WORKING_HEAD'] }" | xargs open
 }
+
+function fetch-latest-pipeline-logs {
+    if [ $# -ne 1 ]; then
+        echo "Error, fetch-logs must specify pipeline"
+        return 1
+    fi
+    local pipeline=$1
+    if [ $# -ne 3 ]; then
+        echo "No environment + owner specified, defaulting to staging + $USER"
+        local env='staging'
+        local owner="$USER"
+    else
+        local env=$2
+        local owner=$3
+    fi
+    local s3_logs_path="s3://datapipeline-logs/$env/$owner/$pipeline/"
+    local latest_s3_logs="$(s3cmd ls $s3_logs_path | grep DIR | tail -n 1 | tr -s ' ' | cut -d ' ' -f3)"
+    latest_s3_logs=${latest_s3_logs%/}
+    local local_logs_path="$HOME/s3/datapipeline-logs/$env/$owner/$pipeline"
+    pushd $local_logs_path
+    s3cmd get -r --skip-existing "$latest_s3_logs"
+    popd
+}

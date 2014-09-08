@@ -19,35 +19,6 @@ alias dpd='be rake definition'
 alias dps='be rake deploy'
 alias dpp='FOG_CREDENTIAL=swipely be rake env=production deploy[now]'
 
-function jenkins-build {
-  gitbranch=$(git symbolic-ref --short HEAD)
-  if [[ $? -eq 0 ]] ; then
-    gitrepo=$(basename `git rev-parse --show-toplevel`)
-    if [[ $? -eq 0 ]] ; then
-        job_prefixes=( app gem )
-        for job_prefix in "${job_prefixes[@]}"
-        do
-            curl -X POST https://github:kwajfh347f@jenkins.swipely.com/job/$job_prefix.$gitrepo/buildWithParameters?BRANCH=$gitbranch > /dev/null 2>&1 || true
-        done
-    fi
-  fi
-}
-
-function jenkins-show {
-  gitrepo=$(basename `git rev-parse --show-toplevel`)
-  if [[ $? -eq 0 ]] ; then
-      job_prefixes=( app gem )
-      for job_prefix in "${job_prefixes[@]}"
-      do
-        job_url="https://github:kwajfh347f@jenkins.swipely.com/job/$job_prefix.$gitrepo"
-        curl -s --head $job_url | head -n 1 | grep "HTTP/1.[01] [23].." > /dev/null
-        if [[ $? -eq 0 ]] ; then
-          open $job_url
-        fi
-      done
-  fi
-}
-
 function show-pr {
     export GIT_WORKING_HEAD=`git rev-parse HEAD`
     curl https://api.github.com/repos/dotswipely/weekly_digest_email_pipeline/pulls?access_token=$(< ~/.github_access_token) 2> /dev/null | jq '[.[] | {url: .html_url, sha: .head.sha}]' | sed s/": "/" => "/ | ruby -e "pulls = eval(STDIN.read); pulls.each { |p| puts p['url'] if p['sha'] == ENV['GIT_WORKING_HEAD'] }" | xargs open

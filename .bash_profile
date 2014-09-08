@@ -76,5 +76,8 @@ ssh-add $HOME/.ssh/s-jump.pem || true;
 # Add datapipeline CLI to path
 export PATH="$HOME/bin/datapipeline-cli:$PATH"
 
+# Add dotswipely/bin
+export PATH="$HOME/git/dotswipely/bin:$PATH"
+
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"

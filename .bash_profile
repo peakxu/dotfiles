@@ -68,6 +68,7 @@ source ~/.alias
 
 # Add rbenv to PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # Add additional SSH identities if present
 ssh-add $HOME/.ssh/pipeline-debug.pem || true;

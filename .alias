@@ -42,6 +42,7 @@ function fetch-latest-pipeline-logs {
     local latest_s3_logs="$(s3cmd ls $s3_logs_path | grep DIR | tail -n 1 | tr -s ' ' | cut -d ' ' -f3)"
     latest_s3_logs=${latest_s3_logs%/}
     local local_logs_path="$HOME/s3/datapipeline-logs/$env/$owner/$pipeline"
+    mkdir -p $local_logs_path
     pushd $local_logs_path
     s3cmd get -r --skip-existing "$latest_s3_logs"
     popd

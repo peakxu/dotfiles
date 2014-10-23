@@ -6,6 +6,8 @@ alias git_cleanup_remote="git branch -r --merged master | egrep -iv '(master|pro
 
 # Bundler shortcuts
 alias be='bundle exec'
+alias ber='be rake'
+alias bes='be rspec'
 alias bivb='bundle install --path vendor/support'
 
 # Working with data pipeline
@@ -17,9 +19,9 @@ alias dpls='dpla | grep'
 alias dplm='dpls peakxu'
 
 # Data pipeline tasks
-alias dpd='be rake definition'
-alias dps='be rake deploy'
-alias dpp='FOG_CREDENTIAL=swipely be rake env=production deploy[now]'
+alias dpd='ber definition'
+alias dps='ber deploy'
+alias dpp='FOG_CREDENTIAL=swipely ber env=production deploy[now]'
 
 function show-pr {
     export GIT_WORKING_HEAD=`git rev-parse HEAD`

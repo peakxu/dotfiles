@@ -12,7 +12,9 @@ alias bivb='bundle install --path vendor/support'
 alias dp='datapipeline'
 alias dpi='datapipeline --id'
 alias dpli='datapipeline --list-runs --id'
-alias dplm='datapipeline --list-pipelines | grep peakxu'
+alias dpla='datapipeline --list-pipelines'
+alias dpls='dpla | grep'
+alias dplm='dpls peakxu'
 
 # Data pipeline tasks
 alias dpd='be rake definition'

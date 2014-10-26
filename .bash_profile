@@ -80,5 +80,8 @@ export PATH="$HOME/bin/datapipeline-cli:$PATH"
 # Add dotswipely/bin
 export PATH="$HOME/git/dotswipely/bin:$PATH"
 
+# Add storm
+export PATH="$HOME/software/apache-storm-0.9.2-incubating/bin:$PATH"
+
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"

@@ -23,6 +23,9 @@ alias dpd='ber definition'
 alias dps='ber deploy'
 alias dpp='FOG_CREDENTIAL=swipely ber env=production deploy[now]'
 
+# emr ssh
+alias pipe-debug-ssh='aws emr ssh --key-pair-file ~/.ssh/pipeline-debug.pem --cluster-id'
+
 function show-pr {
     export GIT_WORKING_HEAD=`git rev-parse HEAD`
     curl https://api.github.com/repos/dotswipely/weekly_digest_email_pipeline/pulls?access_token=$(< ~/.github_access_token) 2> /dev/null | jq '[.[] | {url: .html_url, sha: .head.sha}]' | sed s/": "/" => "/ | ruby -e "pulls = eval(STDIN.read); pulls.each { |p| puts p['url'] if p['sha'] == ENV['GIT_WORKING_HEAD'] }" | xargs open

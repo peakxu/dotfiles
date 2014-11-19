@@ -5,6 +5,8 @@ alias git_cleanup="git branch --merged master | egrep -iv '(master|production|st
 alias git_cleanup_remote="git branch -r --merged master | egrep -iv '(master|production|staging)' | sed 's/origin\///g' | xargs -n 1 git push --delete origin"
 alias grbm='git rebase master'
 alias grim='git rebase -i master'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
 
 # Bundler shortcuts
 alias be='bundle exec'

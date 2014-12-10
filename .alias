@@ -27,6 +27,8 @@ alias dplm='dpls peakxu'
 alias dpd='ber definition'
 alias dps='ber deploy'
 alias dpp='FOG_CREDENTIAL=swipely ber env=production deploy[now]'
+alias dpg='ber graph'
+alias pg='pipely-graph'
 
 # emr ssh
 alias pipe-debug-ssh='aws emr ssh --key-pair-file ~/.ssh/pipeline-debug.pem --cluster-id'

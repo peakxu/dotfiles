@@ -60,3 +60,19 @@ function fetch-latest-pipeline-logs {
     mkdir -p "$local_logs_path"
     aws s3 sync "$latest_s3_logs" "$local_logs_path"
 }
+
+function cleanup_hash {
+    if [ $# -ne 1 ]; then
+        echo "Error, cleanup_hash must specify hash to cleanup"
+        return 1
+    fi
+    local store_hash=$1
+    local s3_path="s3://a-default-p-output/$store_hash"
+    local folder_name=$(aws s3 ls $s3_path | grep RecentSales | awk '/PRE .+/{ print $2}')
+    if [ -z "$folder_name" ]
+    then
+        return 0
+    else
+        aws s3 sync /tmp/empty $s3_path --delete
+    fi
+}

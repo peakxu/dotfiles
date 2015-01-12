@@ -22,6 +22,7 @@ alias dpli='datapipeline --list-runs --id'
 alias dpla='datapipeline --list-pipelines'
 alias dpls='dpla | grep'
 alias dplm='dpls peakxu'
+alias dplc='dplm | grep FINISHED | awk '/df-.+/{ print $3}' | xargs -L1 datapipeline --delete --list-runs --id'
 
 # Data pipeline tasks
 alias dpd='ber definition'

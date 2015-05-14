@@ -86,5 +86,8 @@ export PATH="$HOME/software/apache-storm-0.9.2-incubating/bin:$PATH"
 # Export Java home environment variable. Preferably >= 1.8
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/latest/Contents/Home
 
+# Export Gem credentials
+source ~/git/dotswipely/bin/bash/gem-credentials.bash || true
+
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"

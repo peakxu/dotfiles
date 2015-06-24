@@ -9,6 +9,9 @@ alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias gcm='git commit -m'
 
+# Jenkins shortcuts
+alias clear_git_notes="git fetch origin 'refs/notes/*:refs/notes/*'; git notes --ref=jenkins remove; git push origin refs/notes/jenkins;"
+
 # Bundler shortcuts
 alias be='bundle exec'
 alias ber='be rake'

@@ -95,3 +95,5 @@ source ~/git/dotswipely/bin/bash/gem-credentials.bash || true
 # NVM
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+nvm use 0.10

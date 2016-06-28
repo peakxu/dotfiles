@@ -61,6 +61,7 @@ syspip(){
 
 # Virtualenv wrapper
 source /usr/local/bin/virtualenvwrapper.sh
+workon global
 
 source ~/.bash_prompt
 

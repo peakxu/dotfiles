@@ -71,12 +71,6 @@ source ~/.alias
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# Add datapipeline CLI to path
-export PATH="$HOME/bin/datapipeline-cli:$PATH"
-
-# Add dotswipely/bin
-export PATH="$HOME/git/dotswipely/bin:$PATH"
-
 # Export Java home environment variable. Preferably >= 1.8
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/latest/Contents/Home
 

@@ -85,5 +85,3 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/latest/Contents/Home
 # NVM
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
-
-nvm use 0.10

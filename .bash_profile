@@ -76,9 +76,6 @@ export PATH="$HOME/bin/datapipeline-cli:$PATH"
 # Add dotswipely/bin
 export PATH="$HOME/git/dotswipely/bin:$PATH"
 
-# Add storm
-export PATH="$HOME/software/apache-storm-0.9.2-incubating/bin:$PATH"
-
 # Export Java home environment variable. Preferably >= 1.8
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/latest/Contents/Home
 

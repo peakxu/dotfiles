@@ -71,9 +71,6 @@ source ~/.alias
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# Add AWS SDE tools to path
-export PATH=/apollo/env/SDETools/bin:$PATH
-
 # Export Java home environment variable. Preferably >= 1.8
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/latest/Contents/Home
 
@@ -83,3 +80,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/latest/Contents/Home
 # NVM
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+# Add AWS SDE tools to path
+export PATH=/apollo/env/SDETools/bin:$PATH
